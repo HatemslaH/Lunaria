@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bdm1u6avi5has"]
+[gd_scene load_steps=7 format=4 uid="uid://bdm1u6avi5has"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_tvr0q"]
 [ext_resource type="Texture2D" uid="uid://740og63rsbl0" path="res://assets/kenney_tiny-town/Tilemap/tilemap.png" id="2_4u3jm"]
 [ext_resource type="PackedScene" uid="uid://dsmqjjnsyixr3" path="res://scenes/player.tscn" id="3_ctcpm"]
+[ext_resource type="PackedScene" uid="uid://gmh7ucfy4xlt" path="res://scenes/enemies/skeleton.tscn" id="4_ocujk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8uccx"]
 resource_name = "Interior"
@@ -152,3 +153,10 @@ tile_map_data = PackedByteArray("AAACAOz/AAAAAAAAAAACAO3/AAAAAAAAAAACAO7/AAAAAAA
 tile_set = SubResource("TileSet_s3yiv")
 
 [node name="Player" parent="." instance=ExtResource("3_ctcpm")]
+
+[node name="Skeleton" parent="." instance=ExtResource("4_ocujk")]
+position = Vector2(496, 376)
+min_step_delay = 0.5
+max_step_delay = 1.5
+step_distance = 70.0
+chance_to_stay = 0.5
